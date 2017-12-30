@@ -1,0 +1,61 @@
+<!--
+  Generated template for the MessagesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color = "secondary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Messages 
+    </ion-title>
+  </ion-navbar>
+
+  <ion-toolbar>
+    <ion-buttons start>
+      <button ion-button icon-only color="dark">
+        <ion-icon name="create"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-segment>
+      <ion-segment-button value="new" color="dark">
+        New
+      </ion-segment-button>
+      <ion-segment-button value="hot" color="dark">
+        Hot
+      </ion-segment-button>
+    </ion-segment>
+    <ion-buttons end>
+      <button ion-button icon-only color="dark">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content class="bg">
+
+  <div id="chatMessages">
+    <div class="message" *ngFor="let message of messages">
+      <div [class]="message.userName == userName ? 'innerMessage messageRight' : 'innerMessage messageLeft'">
+        <div class="username">{{message.userName}}</div>
+        <div class="message">{{message.message}}</div>
+      </div>
+    </div>
+  </div> 
+
+</ion-content>
+
+<!--<ion-footer>
+    <ion-toolbar>
+      <div id="footer">
+        <div class="elem"><ion-input type="text" [(ngModel)]="message"></ion-input> </div>
+        <div class="elem"><button ion-button icon only (click)="sendMessages()"> <ion-icon name="send"></ion-icon> </button></div>
+      </div>
+     </ion-toolbar>
+</ion-footer>-->

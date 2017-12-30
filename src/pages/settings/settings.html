@@ -1,0 +1,83 @@
+<!--
+  Generated template for the SettingsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color = "secondary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Settings
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="bg">
+
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title style="text-align:center;">
+        Account Settings
+      </ion-card-title>
+      
+      <ion-list id="menu-userDetailsList" no-lines >       
+        <ion-item style="width:100%;height:80px;margin:0px 0px;line-height:180px;text-align:center;" color ="secondary">
+          <ion-avatar item-start>
+            <img src="assets/profile/avatar5.png">
+          </ion-avatar>
+          <h2>User Name {{userName}}</h2>
+          <p>Email {{email}}</p>
+        </ion-item>   
+      </ion-list>
+
+      <ion-list no-lines>
+        <ion-item-group >
+
+          <ion-item-divider color="light" id="menu-userCentralDivide" >
+            <ion-note item-left>Favorites</ion-note>        
+          </ion-item-divider>
+
+          <ion-list>
+          <ion-label><a>Frequent Places</a></ion-label>     <ion-label>Your frequently searched travel places will be displayed here</ion-label>
+
+          <ion-item>
+            <ion-label>Swipe actions</ion-label>
+            <p>In conversation list</p>
+            <ion-checkbox color="primary" checked="true" item-end></ion-checkbox>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Auto-fit messages</ion-label>
+            <p>Shrink Messages to fit the screen</p>
+            <ion-checkbox disabled="true" item-end></ion-checkbox>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Confrim before deleting</ion-label>
+            <ion-checkbox color="primary" checked="true" item-end></ion-checkbox>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Auto-advance</ion-label>
+            <p>Show feedback conversation list after you archive or delete</p>
+            <ion-checkbox color="dark" checked="true" item-end></ion-checkbox>
+          </ion-item>
+
+          </ion-list>     
+
+          <button menuClose ion-button block small block color="secondary" icon-left id="logout-button"  (click) ="logOutUser()"><ion-icon name="log-out"></ion-icon>User LogOut</button>
+          <button menuClose ion-button block small block color="dark" icon-left id="delete-button"  (click) ="logOutUser()"><ion-icon name="delete"></ion-icon>Delete Your Account</button>
+                    
+        </ion-item-group>  
+      </ion-list>   
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+

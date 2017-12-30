@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-navbar color = "secondary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="bg">
+
+  <ion-card>
+    <img src="assets/icon/help.png"/>
+    <ion-card-content>
+      <ion-card-title>
+        Live Reach
+      </ion-card-title>
+      <p>
+        The most popular travel app ever, and largely
+        responsible for bridging the gap between travellers and travel agencies. We are reachable and reliable to ensure the best usability experince. 
+        <ion-note item-right>11h ago</ion-note>
+      </p>
+
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-left clear small>
+            <ion-icon name="thumbs-up"></ion-icon>
+            <div (tap)="tapEvent($event)">{{tap}} Likes</div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-left clear small>
+            <ion-icon name="text"></ion-icon>
+            <div>4 Comments</div>
+          </button>
+        </ion-col>
+        <ion-col >
+          <ion-note>
+            11h ago
+          </ion-note>
+        </ion-col>
+      </ion-row>
+
+      <ion-item>
+        <ion-icon name="logo-twitter" item-start color="primary"></ion-icon>
+          <a>Followers</a>
+        <ion-badge item-end>260k</ion-badge>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="logo-facebook" item-start color="primary"></ion-icon>
+          <a>Likes</a>
+        <ion-badge item-end>580k</ion-badge>
+      </ion-item>
+      <ion-item >
+        <ion-icon name="logo-github" item-start color="dark"></ion-icon>
+          <a>Followers</a>
+        <ion-badge item-end color="dark">200k</ion-badge>
+      </ion-item>
+      <ion-item >
+        <ion-icon name="logo-googleplus" item-start color="danger"></ion-icon>
+          <a>Followers</a>
+        <ion-badge item-end color="danger">7000k</ion-badge>
+      </ion-item>    
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

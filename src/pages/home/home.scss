@@ -1,0 +1,31 @@
+page-home {
+
+$dark: #000;
+$highlight: blue;
+
+#map{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+}
+	
+ion-card {
+	position: absolute;
+	text-align: center;
+	background: transparentize($dark, 0.5); 
+	opacity: .8;
+	background:#998099;
+	top: 8%;
+}
+
+.bg{
+	
+}
+
+.menuToggle{
+	position: absolute;
+	z-index: 1;
+}
+
+}

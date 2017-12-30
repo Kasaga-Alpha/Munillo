@@ -1,0 +1,36 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="bg">
+
+  <button ion-button icon-left block (click) ="loginWithFacebook()" *ngIf="!provider.loggedIn"> <ion-icon name="logo-facebook" ></ion-icon>LOGIN WITH FACEBOOK</button>
+
+  <ion-card *ngIf="facebook.loggedIn">
+    <img src="{{facebook.profilePicture}}"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{facebook.name}}
+      </ion-card-title>
+      <p style="text-align: center">
+        {{facebook.email}}
+        <ion-note item-right>11h ago</ion-note>
+      </p>
+
+    </ion-card-content>
+  </ion-card>
+
+  <button ion-button icon-left block (click) ="loginWithFacebook()" *ngIf="facebook.loggedIn"> <ion-icon name="logo-facebook" ></ion-icon>LOG OUT FACEBOOK</button>
+
+</ion-content>

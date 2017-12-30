@@ -1,0 +1,65 @@
+<!--<ion-header>
+  <ion-navbar color = "danger">
+  	
+    <ion-title text-center>Munilo</ion-title>
+  </ion-navbar>
+</ion-header>-->
+
+<ion-content class="bg">
+
+  <button class="menuToggle" ion-button menuToggle color="dark" clear large style="margin:0px 0px;line-height:600px;" end>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+
+  <ion-card >
+
+    <div class="home-top">
+      <ion-list> 
+        <p>
+          <button ion-button color="light" icon-only (click) = "travelMeans()" ><ion-icon name="bus" ></ion-icon></button>
+          <button ion-button color="light" icon-only (click) = "travelMeans()" ><ion-icon name="plane" ></ion-icon></button>
+          <button ion-button color="light" icon-only (click) = "travelMeans()" ><ion-icon name="subway" ></ion-icon></button>
+          <button ion-button color="light" icon-only (click) = "travelMeans()" ><ion-icon name="boat" ></ion-icon></button>
+        </p>
+        <!---{{Start}} - {{End}}-->
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-item > 
+                <ion-input type = "text" placeholder="Start" [(ngModel)]="Start"> </ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col>  
+              <ion-item>
+                <ion-input type = "text" placeholder="Destination" [(ngModel)]="End"> </ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>        
+          <!--Travel Button with vehicle and directions icons-->
+          <ion-row>          
+            <button id = "btnTravel" ion-button full icon-left  (click) = "calculateAndDisplayRoute()" color="dark" > <ion-icon name="navigate"></ion-icon><ion-icon name="bus"></ion-icon>Travel</button>
+          </ion-row>
+        </ion-grid>
+      </ion-list>
+    </div>
+
+  </ion-card>
+
+  <!--Include the map in the page background-->
+  <div  id="map" data-tap-enabled= "true"></div>
+
+  <!--Include the share floating action button-->
+  <ion-fab left bottom color= "secondary">
+    <button id = "btnShare" ion-fab mini color= "dark"><ion-icon name="share" color= "secondary" ></ion-icon></button>
+      <ion-fab-list side="right">
+        <button ion-fab color="primary" ><ion-icon name="logo-facebook"></ion-icon></button>
+        <button ion-fab color="primary"><ion-icon name="logo-twitter"></ion-icon></button>
+        <button ion-fab color="secondary"><ion-icon name="logo-vimeo"></ion-icon></button>
+        <button ion-fab color="danger"><ion-icon name="logo-googleplus"></ion-icon></button>
+      </ion-fab-list>
+  </ion-fab>
+
+</ion-content>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

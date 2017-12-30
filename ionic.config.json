@@ -1,0 +1,8 @@
+{
+  "name": "Munilo",
+  "app_id": "Munilo",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

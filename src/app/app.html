@@ -1,0 +1,72 @@
+<ion-menu [content]="content">
+  <!--<ion-header>
+    <ion-navbar color = "dark">
+    <ion-toolbar>
+      <ion-title style="text-align:center;"> 
+        My Profile
+      </ion-title>
+    </ion-toolbar>
+  </ion-navbar>
+  </ion-header>-->
+
+  <ion-content id="side-menu" class="bg">
+
+    <ion-list id="menu-userDetailsList" no-lines style="margin:0px 0px;">       
+      <ion-item style="width:100%;height:120px;margin:0px 0px;line-height:180px;text-align:center;" color ="secondary">
+        <ion-avatar item-start>
+          <img src="assets/profile/avatar5.png">
+        </ion-avatar>
+        <h2>User Name {{userName}}</h2>
+        <p>Email {{email}}</p>
+      </ion-item>   
+    </ion-list>
+
+    <!--<ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list>-->
+
+    <ion-list id="menu-pageNavList" no-lines style="margin:0px 0px;">
+
+      <ion-item-group >
+
+        <ion-item-divider color="light" id="menu-userCentralDivide" >
+          <ion-note item-left>User central</ion-note>
+          <!--<ion-select [(ngModel)]="UserCentral"> 
+            <ion-option value="n64">Add Account</ion-option>
+            <ion-option value="ps">Manage Accounts</ion-option>
+          </ion-select> -->
+        </ion-item-divider>
+
+        <ion-item small menuClose color="none" id="menu-userCentralList" *ngFor="let p of pages" (click) ="openPage(p)" >
+          <ion-icon name={{p.icon}} item-left></ion-icon>
+          {{p.title}}
+        </ion-item>
+
+        <ion-item-divider id="menu-helpCentralDivide">
+          <ion-note small item-left>Help Central</ion-note>
+        </ion-item-divider>
+
+        <ion-item menuClose color="none" id="menu-helpCentralList" *ngFor="let p of pagesBreak" (click) ="openPage(p)" ><ion-icon name={{p.icon}} item-left></ion-icon>
+          {{p.title}}
+        </ion-item>
+                
+      </ion-item-group>
+
+    </ion-list>
+
+  </ion-content>
+
+  <ion-footer> 
+    <ion-toolbar color = "dark">
+      <div id="footer">
+        <button menuClose ion-button block small outline color="secondary" icon-left id="logout-button" *ngFor="let p of logout" (click) ="logOutUser(p)"><ion-icon name={{p.icon}}></ion-icon>{{p.title}}</button>
+      </div>
+     </ion-toolbar>
+  </ion-footer>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

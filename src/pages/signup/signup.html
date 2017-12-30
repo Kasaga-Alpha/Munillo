@@ -1,0 +1,125 @@
+<ion-header>
+  <ion-navbar color = "secondary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Signup form
+    </ion-title>
+  </ion-navbar>
+
+  <ion-toolbar>
+
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content class ="bg">
+
+    <!--<form id="signup-form" (submit)="doSubmit($event)" [formGroup]="langForm">
+
+      <ion-list radio-group formControlName="langs">-->
+
+
+  <ion-card>
+
+    <ion-card-header text-center>
+     Registration
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-list inset>
+      
+        <ion-item id="signup-firstName">
+          <ion-label floating> First Name </ion-label>
+          <ion-input type="text" placeholder=""></ion-input>
+        </ion-item>
+
+        <ion-item id="signup-lastName">
+          <ion-label floating> Last Name </ion-label>
+          <ion-input type="text" placeholder=""></ion-input>
+        </ion-item>
+
+        <ion-item id="signup-gender">
+          <ion-label>Gender</ion-label>
+            <ion-select [(ngModel)]="gender">
+              <ion-option value="Male">Male</ion-option>
+              <ion-option value="Female">Female</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <!--<ion-item id="dOB">
+          <ion-label>Date of Birth</ion-label>
+          <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
+        </ion-item>-->
+
+        <ion-item id="signup-userType">
+          <ion-label >User Type</ion-label>
+            <ion-select [(ngModel)]="userType">
+              <ion-option value="Client">Client</ion-option>
+              <ion-option value="Service Provider">Service Provider</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item id="signup-modeOfTransport">
+          <ion-label >Mode of Transport</ion-label>
+            <ion-select [(ngModel)]="modeOfTransport">
+              <ion-option value="Road">Road</ion-option>
+              <ion-option value="Air">Air</ion-option>
+              <ion-option value="Subway">Subway</ion-option>
+              <ion-option value="Water">Water</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item id="signup-company/Organisation">
+          <ion-label >Company/Organisation</ion-label>
+            <ion-select [(ngModel)]="transportmode">
+              <ion-option value="Road">Road</ion-option>
+              <ion-option value="Air">Air</ion-option>
+              <ion-option value="Water">Water</ion-option>
+              <ion-option value="Subway">Subway</ion-option>
+              <ion-option value="Train">Train</ion-option>
+              <ion-option value="Bicycle">Bicycle</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item id="signup-address">
+          <ion-label floating>Address</ion-label>
+          <ion-input type="text" placeholder=""></ion-input>
+        </ion-item>
+
+        <ion-item id="signup-userName">
+          <ion-label floating> User Name </ion-label>
+          <ion-input type="text" placeholder=""></ion-input>
+        </ion-item>
+
+         <ion-item id="signup-email">
+          <ion-label floating>Email</ion-label>
+          <ion-input type="text" #username></ion-input>
+        </ion-item>
+
+        <ion-item id="signup-password">
+          <ion-label floating>Password</ion-label>
+          <ion-input type="Password" #password></ion-input>
+        </ion-item>
+
+        <ion-item id="signup-verifyPassword">
+          <ion-label floating>Verify Password</ion-label>
+          <ion-input type="Password" #verifyPassword></ion-input>
+        </ion-item>
+
+      </ion-list>
+
+      <button id="signup-button" ion-button  block color="danger" (click) ="registerUser()"> Sign up </button>
+    <!--</form>-->
+    </ion-card-content>
+  </ion-card>
+    
+</ion-content>
+
+
+<ion-footer>
+  
+</ion-footer>
